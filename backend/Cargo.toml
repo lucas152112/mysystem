@@ -1,0 +1,27 @@
+[package]
+name = "mysystem-backend"
+version = "0.1.0"
+edition = "2021"
+description = "System management backend with hot-reload microservices"
+authors = ["Developer <dev@example.com>"]
+license = "MIT"
+repository = "https://github.com/lucas152112/mysystem"
+
+[dependencies]
+axum = { version = "0.7", features = ["macros"] }
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sqlx = { version = "0.7", features = ["mysql", "runtime-tokio-native-tls"] }
+dotenv = "0.15"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+tokio-tungstenite = "0.20"
+anyhow = "1.0"
+thiserror = "1.0"
+
+[dev-dependencies]
+reqwest = "0.11"
+tokio = { version = "1.0", features = ["full"] }
